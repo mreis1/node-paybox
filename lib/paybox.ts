@@ -133,7 +133,7 @@ export class Paybox {
     }
     getKey(pathOrKey, callback){
         if(pathOrKey.charAt(0) === '/'){
-            fs.readFile(pathOrKey, 'utf8', function(err, key){
+            fs.readFile(pathOrKey, 'utf8', (err, key) => {
                 callback(key);
             });
         }
@@ -270,7 +270,7 @@ export class Paybox {
      * @return {void}
      */
     createTransaction(options: IPayboxTransactionCfg, callback){
-        this.getURL(options.offer, options.isTest === true, function(err, url){
+        this.getURL(options.offer, options.isTest === true, (err, url)=>{
             if(err !== null){
                 return callback(err, null);
             }
