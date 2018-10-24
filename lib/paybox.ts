@@ -289,7 +289,7 @@ export class Paybox {
                 _transaction['PBX_'][field.toUpperCase()] = options['PBX_'][field];
             });
 
-            paybox.signTransaction(_transaction, options.key, _transaction.hash, (error, transaction) => {
+            this.signTransaction(_transaction, options.key, _transaction.hash, (error, transaction) => {
                 if(error === null){
                     transaction = this.generateFormBody(transaction);
                 }
