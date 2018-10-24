@@ -3,11 +3,27 @@
   "description": "Library to simply connect to the Paybox platform",
   "version": "1.0.0",
   "main": "./lib/paybox.js",
+  "scripts": {
+    "build": "tsc -d ./lib/paybox.ts"
+  },
+  "includes": [
+    "./lib/**/*d.ts",
+    "./lib/**/*.js",
+    "./lib/**/*.json",
+    "package.json",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
   "engines": {
     "node": ">= 0.8.18"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/Ideolys/node-paybox"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ideolys/node-paybox"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.36"
   }
 }

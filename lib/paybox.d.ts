@@ -51,6 +51,7 @@ export interface IPayboxTransactionCfg {
     isTest: boolean;
     offer: ('system');
     method: ('POST' | 'GET');
+    key: string;
     PBX_: IPayboxProps;
 }
 export declare class Paybox {
@@ -86,7 +87,7 @@ export declare class Paybox {
      * @param  {String} pubkey    The public key in UTF8
      * @return {Boolean}          If the message is signed by the owner of the public key
      */
-    checkSignature(message: any, signature: any, pubkey: any): any;
+    checkSignature(message: any, signature: any, pubkey: any): boolean;
     /**
      * Generates a signature and inserts it
      * @param  {Object} transaction The transaction returned by paybox.createTransaction()

@@ -80,6 +80,7 @@ export interface IPayboxTransactionCfg {
      * Currently there's only a suite: 'system' */
     offer: ('system'),
     method: ('POST'|'GET'),
+    key: string,
     PBX_: IPayboxProps
 }
 
@@ -361,7 +362,7 @@ export class Paybox {
         }
         var _server     = this.extractURLInfos(serverURL);
         var reqLibrary  = _server.isSSL ? https : http;
-        var req = reqLibrary.request(_server);
+        var req = (reqLibrary as any).request(_server);
         req.on('response', function(res){
             var _isAlive = false;
             res.setEncoding('utf8');
