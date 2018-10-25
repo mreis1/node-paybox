@@ -78,10 +78,11 @@ export interface IPayboxTransactionCfg {
     isTest: boolean;
     /* The block of servers that we wish to use.
      * Currently there's only a suite: 'system' */
-    offer: ('system'),
-    method: ('POST'|'GET'),
-    key: string,
-    PBX_: IPayboxProps
+    offer: ('system');
+    method: ('POST'|'GET');
+    key: string;
+    hash: ('sha256'|'sha512');
+    PBX_: IPayboxProps;
 }
 
 
@@ -279,7 +280,7 @@ export class Paybox {
                 'expectedIP'  : '',
                 'method'      : options.method || 'GET',
                 'body'        : '',
-                'hash'        : null,
+                'hash'        : options.hash || 'sha512',
                 'PBX_'      : {
                     'RUF1'        : 'POST'
                 }

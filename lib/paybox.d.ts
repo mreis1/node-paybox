@@ -52,6 +52,7 @@ export interface IPayboxTransactionCfg {
     offer: ('system');
     method: ('POST' | 'GET');
     key: string;
+    hash: ('sha256' | 'sha512');
     PBX_: IPayboxProps;
 }
 export declare class Paybox {
