@@ -15,46 +15,46 @@ var PAYBOX_RESPONSE_ERRORS  = require('./response-errors.json');
  * http://www1.paybox.com/espace-integrateur-documentation/dictionnaire-des-donnees/paybox-system/
  */
 export interface IPayboxProps {
-    ANNULE?	 //URL de retour en cas d’abandon	F
-    ARCHIVAGE?	 //Référence archivage	F
-    ATTENTE?	 //URL de retour en cas de paiement en attente de validation	F
-    AUTOSEULE?	 //Ne pas envoyer ce paiement à la banque immédiatement	F
-    CK_ONLY?	 //Forçage d’un mode de paiement Carte Cadeau uniquement (non mixte)	F
-    CMD	 //Référence commande	O
-    CODEFAMILLE	 //Données spécifique Cofinoga	C
-    CURRENCYDISPLAY?	 //Configuration des devises affichées	F
-    DATEn?	 //Paiement en plusieurs fois : Dates des échéances	F
-    DEVISE	 //Devise (monnaie)	O
-    DIFF?	 //Nombre de jours pour un paiement différé	F
-    DISPLAY?	 //Timeout de la page de paiement	F
-    EFFECTUE?	 //URL de retour en cas de succès	F
-    EMPREINTE?	 //Empreinte fournie lors d’un premier paiement	F
-    ENTITE?	 //Référence numérique d’un subdivision	F
-    ERRORCODETEST?	 //Code erreur à renvoyer (pour tests)	F
-    GROUPE	 //Groupe pour Paybox Version ++	C
-    HASH	 //Algorithme utilisé pour la signature du message	O
-    HMAC	 //Signature du message	O
-    IDABT?	 //Numéro d’abonnement	F
-    IDENTIFIANT	 //Identifiant client Paybox	O
-    LANGUE?	 //Langue de la page de paiement	F
-    MAXICHEQUE_DATA	 //Donnée spécifique Maxichèque	C
-    NBCARTESKDO?	 //Nombre max de cartes cadeau utilisables par le porteur	F
-    NETRESERVE_DATA	 //Données spécifique Net Reserve	C
-    ONEY_DATA	 //Données spécifique Oney	C
-    PAYPAL_DATA	 //Données spécifiques à Paypal	C
-    PORTEUR	 //Adresse mail du client	O
-    RANG	 //Numéro de rang fourni par la banque	O
-    REFABONNE	 //Référence de l’abonne (version Plus)	C
-    REFUSE?	 //URL de retour en cas de refus du paiement	F
-    REPONDRE_A?	 //URL IPN	F
-    RETOUR	 //Configuration de la réponse	O
-    RUF1?	 //Méthode d’appel de l’URL IPN	F
-    SITE	 //Numéro de site fourni par la banque	O
-    SOURCE?	 //Format de la page de paiement (pour paiement mobile)	F
-    TIME	 //Date et heure de la signature	O
-    TOTAL	 //Montant	O
-    TYPECARTE?	 //Forçage du moyen de paiement	F
-    TYPEPAIEMENT?	 //Forçage du moyen de paiement	F
+    ANNULE?     //URL de retour en cas d’abandon    F
+    ARCHIVAGE?     //Référence archivage    F
+    ATTENTE?     //URL de retour en cas de paiement en attente de validation    F
+    AUTOSEULE?     //Ne pas envoyer ce paiement à la banque immédiatement    F
+    CK_ONLY?     //Forçage d’un mode de paiement Carte Cadeau uniquement (non mixte)    F
+    CMD     //Référence commande    O
+    CODEFAMILLE     //Données spécifique Cofinoga    C
+    CURRENCYDISPLAY?     //Configuration des devises affichées    F
+    DATEn?     //Paiement en plusieurs fois : Dates des échéances    F
+    DEVISE     //Devise (monnaie)    O
+    DIFF?     //Nombre de jours pour un paiement différé    F
+    DISPLAY?     //Timeout de la page de paiement    F
+    EFFECTUE?     //URL de retour en cas de succès    F
+    EMPREINTE?     //Empreinte fournie lors d’un premier paiement    F
+    ENTITE?     //Référence numérique d’un subdivision    F
+    ERRORCODETEST?     //Code erreur à renvoyer (pour tests)    F
+    GROUPE     //Groupe pour Paybox Version ++    C
+    HASH     //Algorithme utilisé pour la signature du message    O
+    HMAC     //Signature du message    O
+    IDABT?     //Numéro d’abonnement    F
+    IDENTIFIANT     //Identifiant client Paybox    O
+    LANGUE?     //Langue de la page de paiement    F
+    MAXICHEQUE_DATA     //Donnée spécifique Maxichèque    C
+    NBCARTESKDO?     //Nombre max de cartes cadeau utilisables par le porteur    F
+    NETRESERVE_DATA     //Données spécifique Net Reserve    C
+    ONEY_DATA     //Données spécifique Oney    C
+    PAYPAL_DATA     //Données spécifiques à Paypal    C
+    PORTEUR     //Adresse mail du client    O
+    RANG     //Numéro de rang fourni par la banque    O
+    REFABONNE     //Référence de l’abonne (version Plus)    C
+    REFUSE?     //URL de retour en cas de refus du paiement    F
+    REPONDRE_A?     //URL IPN    F
+    RETOUR     //Configuration de la réponse    O
+    RUF1?     //Méthode d’appel de l’URL IPN    F
+    SITE     //Numéro de site fourni par la banque    O
+    SOURCE?     //Format de la page de paiement (pour paiement mobile)    F
+    TIME     //Date et heure de la signature    O
+    TOTAL     //Montant    O
+    TYPECARTE?     //Forçage du moyen de paiement    F
+    TYPEPAIEMENT?     //Forçage du moyen de paiement    F
 
 
     // To allow PBX to be extended
@@ -62,10 +62,10 @@ export interface IPayboxProps {
 
     /*
         The following properties are not part of this interface because they start by a number.
-        - 1EURO_CODEEXTERNE	    //Données spécifique 1euro.com	C
-        - 1EURO_DATA	        //Données spécifique 1euro.com	C
-        - 2MONTn	            //Paiement en plusieurs fois : Montant des échéances	F
-        - 3DS	                //Désactivation 3-D Secure ponctuelle	F
+        - 1EURO_CODEEXTERNE        //Données spécifique 1euro.com    C
+        - 1EURO_DATA            //Données spécifique 1euro.com    C
+        - 2MONTn                //Paiement en plusieurs fois : Montant des échéances    F
+        - 3DS                    //Désactivation 3-D Secure ponctuelle    F
     * */
 }
 
@@ -100,10 +100,10 @@ export class Paybox {
     response(transaction, datas, pubkeyPath, callback){
         var _error = null;
         this.checkIdentity(transaction, datas, pubkeyPath, (identityOK) => {
-            if(!identityOK){
+            if (!identityOK) {
                 _error = 'This response is not from a paybox server';
             }
-            else{
+            else {
                 _error = this.getResponseError(transaction, datas);
             }
             callback(_error, transaction);
@@ -392,11 +392,11 @@ export class Paybox {
             callback  = isTest;
             isTest    = false;
         }
-        var _payboxSystemPath = '/cgi/MYchoix_pagepaiement.cgi';
+        var base = PAYBOX_SERVERS[offer] && PAYBOX_SERVERS[offer].base || '';
         var servers = this.servers(offer, isTest);
         this.checkNextServer(servers, 0, function(err, serverURL){
             if(serverURL !== undefined){
-                serverURL += _payboxSystemPath;
+                serverURL += base;
             }
             callback(err, serverURL);
         });

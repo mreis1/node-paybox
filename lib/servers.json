@@ -1,11 +1,22 @@
 
 {
   "system" :  {
+    "base": "/cgi/MYchoix_pagepaiement.cgi",
     "prod" :  [
       "https://tpeweb.paybox.com",
       "https://tpeweb1.paybox.com"
     ],
     "test" :  [
+      "https://preprod-tpeweb.paybox.com"
+    ]
+  },
+  "mobile": {
+    "base": "/cgi/ChoixPaiementMobile.cgi",
+    "prod": [
+      "https://tpeweb.paybox.com",
+      "https://tpeweb1.paybox.com"
+    ],
+    "test": [
       "https://preprod-tpeweb.paybox.com"
     ]
   }
